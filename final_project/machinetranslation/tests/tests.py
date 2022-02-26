@@ -30,15 +30,15 @@ class TestTranslateFunctions(unittest.TestCase):
 
     
     def test_untranslatable(self):
-        self.assertEqual(english_to_french(
+        self.assertNotEqual(english_to_french(
             "Глупый тест"),
-            "Глупый тест"
+            None
         )
-        self.assertEqual(french_to_english(
+        self.assertNotEqual(french_to_english(
             "Глупый тест"),
-            "Глупый тест"
+            None
         )
-
+    
 
 if __name__ == '__main__':
     unittest.main()
